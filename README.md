@@ -1,2 +1,0 @@
-# coopwithme
-Coop Games Match
