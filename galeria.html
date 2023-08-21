@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+    font-family: sans-serif;
+  font-size: medium;
+  word-break: keep-all;
+  color:#E4DCCF;
+}
+
+h4 {
+  font-size: medium;
+  word-break: keep-all;
+  margin: 0%;
+  color: #E4DCCF;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+
+}
+
+p{
+    font-size:medium;
+    margin: 0%;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  display: none; 
+
+  /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #002B5B;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #F05831;
+  color: white;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav {
+  background-color: #002B5B;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  margin-bottom: 0%;
+}
+.topnav a {
+  display:inline-block;
+  justify-content: center;
+
+  font-family: "silkscreen";
+  color: #F9F5EB;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 25px;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  justify-content: center;
+  background-color: #F05831;
+  color: rgb(#E4DCCF);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  justify-content: baseline;
+  background-color: #F05831;
+  color: white;
+}
+
+body{
+    height: 100vh;
+    margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    background-color: #002044;
+    overflow-y: scroll;
+}
+.main_footer_copy   { background-color:#F05831; width:100%;  float:left; font-family: 'Lato', sans-serif; text-align:center; padding:0.5em 0em; bottom:0px; }
+.main_footer_copy p { font-size:1em; color:#ffffff; height:10%; margin:auto}
+.main_footer_copy .m-b-footer   { margin-bottom:1em; }
+.main_footer_copy .by   { font-size:1em; }
+.main_footer_copy .by a       { color:#fff; text-decoration:none; font-weight:600; transition:0.2s; }
+.main_footer_copy .by a:hover { text-decoration:underline; color:#002044 }
+.main_footer_copy .by i { font-size:1em; margin-right:3px; color:#F05831; }
+
+</style>
+</head>
+
+<body>
+
+    
+
+    <nav>
+        <div class ="topnav">
+            <a href="index.html">Home</a>
+            <a class="active" href="galeria.html">Games</a>
+            <a href="login.html">Login</a>
+            <a href="Reviews.html">Reviews</a>
+        </div>
+    </nav>
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+
+<h2 style="color: white; font-family: silkscreen;">COOP GAMES</h2>
+
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Platformer</button>
+  <button class="btn" onclick="filterSelection('cars')"> Puzzle</button>
+  <button class="btn" onclick="filterSelection('people')">FPS</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4vpe.png" alt="Mountains" style="width:100%">
+      <h4>Turtles in Time</h4>
+      
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2p0v.png" alt="Lights" style="width:100%">
+      <h4>Sunset Riders</h4>
+    
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4a0q.png" alt="Nature" style="width:100%">
+      <h4>Final Fight</h4>
+    
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4te0.png" alt="Car" style="width:100%">
+      <h4>Streets of Rage</h4>
+    
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co64pi.png" alt="Car" style="width:100%">
+      <h4>Contra III: The Alien Wars</h4>
+      
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co62ao.png" alt="Car" style="width:100%">
+      <h4>Cuphead</h4>
+      
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2ify.png" alt="Car" style="width:100%">
+      <h4>Battleblock Theater</h4>
+    
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co527e.png" alt="Car" style="width:100%">
+      <h4>Castle Crashers</h4>
+     
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1rs4.png" alt="Car" style="width:100%">
+      <h4>Portal 2</h4>
+    
+    </div>
+    
+
+
+</div>
+<div class="column people">
+  <div class="content">
+  <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2t97.png" alt="Car" style="width:100%">
+    <h4>It Takes Two</h4>
+  
+  </div>
+  
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+   
+<div class="main_footer_copy">
+    
+    <p class="m-b-footer"> Coop With Me - 2023, todos os direitos reservados.</p> 
+    <p class="by"><i class="icon icon-heart-3"></i> <a href="#" title="Loop Nerd">Privacy Policy and Terms </a></p>
+</div>
+</footer> 
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+
